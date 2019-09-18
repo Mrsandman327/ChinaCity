@@ -23,7 +23,7 @@ void ChinaCity::Initjson()
 	CString strfile = m_strUserPath + _T("chinacity.json");
 
 	std::string filestr=readFileIntoString(strfile.GetBuffer(0));
-	CString cfilestr=UTF8_to_ANSI(filestr.c_str());
+	CString cfilestr=filestr.c_str();
 
 	if(!oJsonCity.IsEmpty())oJsonCity.Clear();
 	oJsonCity.Parse(cfilestr.GetBuffer(0));
